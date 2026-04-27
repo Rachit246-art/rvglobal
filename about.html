@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Rv Global Luxury Aviation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .inner-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/img/hero_jet.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .about-company-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .about-company-img {
+            position: relative;
+        }
+        .about-company-img img {
+            width: 100%;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: 30px 30px 0px rgba(197, 160, 89, 0.05);
+        }
+        .about-company-img::after {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            border-top: 2px solid var(--primary-gold);
+            border-right: 2px solid var(--primary-gold);
+        }
+        .about-company-text h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: var(--text-white);
+            line-height: 1.2;
+        }
+        .about-company-text h2 span {
+            color: var(--primary-gold);
+            display: block;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 15px;
+        }
+        .about-company-text p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        .company-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .stat-item h4 {
+            color: var(--primary-gold);
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        .stat-item p {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-white);
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 992px) {
+            .about-company-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .about-company-text h2 {
+                font-size: clamp(2rem, 8vw, 3rem);
+            }
+            .company-stats {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+            .about-company-img img {
+                box-shadow: 15px 15px 0px rgba(197, 160, 89, 0.05);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">RV <span>GLOBAL</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">More <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="industries.html">Industries</a>
+                            <a href="testimonials.html">Testimonials</a>
+                            <a href="why-us.html">Why Us</a>
+                            <a href="contact.html">Contacts</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="contact.html" class="btn-premium">Inquire Now</a>
+                <button id="mobile-menu-toggle" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+            </nav>
+        </div>
+        <div id="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="vision.html">Vision &amp; Mission</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="industries.html">Industries</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="why-us.html">Why Choose Us</a>
+            <a href="contact.html" class="mobile-nav-cta">Inquire Now</a>
+        </div>
+    </header>
+
+    <section class="inner-hero">
+        <div class="container">
+            <h1 data-reveal>ABOUT RV GLOBAL</h1>
+            <p data-reveal style="letter-spacing: 5px; text-transform: uppercase; color: var(--primary-gold);">Excellence in Every Ascent</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="about-company-grid">
+                <div class="about-company-img" data-reveal>
+                    <img src="assets/img/hero_jet.png" alt="RV Global Private Jet">
+                </div>
+                <div class="about-company-text" data-reveal>
+                    <h2><span>The RV Global Story</span>ESTABLISHING NEW STANDARDS IN FLIGHT</h2>
+                    <p>
+                        RV Global was born from a simple yet ambitious vision: to provide the ultimate aviation experience for the world's most discerning travelers. We understood that in the realm of high-stakes business and global leadership, travel is not just about reaching a destination—it's about the precision, privacy, and peace of mind along the way.
+                    </p>
+                    <p>
+                        Today, we stand as a beacon of excellence in the private charter industry. Our global presence, spanning across major financial hubs, allows us to offer localized expertise with a truly international reach.
+                    </p>
+                    <div class="company-stats">
+                        <div class="stat-item">
+                            <h4>15+</h4>
+                            <p>Years of Excellence</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>200+</h4>
+                            <p>Global Destinations</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>50k+</h4>
+                            <p>Flight Hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: #050505;">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span>Operational Strengths</span>
+                <h2>WHY WE LEAD THE MARKET</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-reveal>
+                    <i class="fa-solid fa-gears"></i>
+                    <h3>Precision Logistics</h3>
+                    <p>Every flight is backed by a 24/7 operations center ensuring real-time monitoring and seamless coordination.</p>
+                </div>
+                <div class="service-card" data-reveal>
+                    <i class="fa-solid fa-user-tie"></i>
+                    <h3>Expert Crew</h3>
+                    <p>Our pilots and cabin crew are handpicked and undergo continuous training to maintain peak performance.</p>
+                </div>
+                <div class="service-card" data-reveal>
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h3>Global Network</h3>
+                    <p>With strategic partnerships across 150 countries, we ensure local expertise on a global scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="about-snippet">
+                <div class="about-text" data-reveal>
+                    <div class="section-title" style="text-align: left;">
+                        <span>Safety Standards</span>
+                        <h2>YOUR SAFETY, OUR OBSESSION</h2>
+                    </div>
+                    <p style="color: var(--text-gray); margin-bottom: 20px;">
+                        At Rv Global, safety isn't just a protocol; it's our core philosophy. We adhere to the most stringent international aviation standards, often exceeding regulatory requirements.
+                    </p>
+                    <ul style="list-style: none; margin-bottom: 30px;">
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check gold-text"></i> IS-BAO Stage 3 Certified</li>
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check gold-text"></i> ARG/US Platinum Rating</li>
+                        <li style="margin-bottom: 15px;"><i class="fa-solid fa-check gold-text"></i> Wyvern Wingman Standard</li>
+                    </ul>
+                </div>
+                <div class="about-img" data-reveal>
+                    <img src="assets/img/hero_chopper.png" alt="Safety First">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo">RV <span>GLOBAL</span></a>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-gray);">
+                        Providing elite aviation services since 2010. Redefining the boundaries of luxury travel.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="vision.html">Our Vision</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Jet Charters</a></li>
+                        <li><a href="#">Chopper Rentals</a></li>
+                        <li><a href="#">Medical Evac</a></li>
+                        <li><a href="#">Group Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fa-solid fa-phone gold-text"></i> +1 (800) LUX-TRAVEL</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope gold-text"></i> concierge@rvglobal.com</a></li>
+                        <li><a href="#"><i class="fa-solid fa-location-dot gold-text"></i> Aviation Hub, Bangalore, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rv Global. All Rights Reserved. Crafted for the Elite.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

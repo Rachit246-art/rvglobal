@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries We Serve | Rv Global</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .inner-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/img/concierge.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .industry-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            padding: 40px;
+            transition: var(--transition-smooth);
+        }
+        .industry-card:hover {
+            border-color: var(--primary-gold);
+            background: #111;
+        }
+        .industry-card h3 {
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .industry-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">RV <span>GLOBAL</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">More <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="industries.html">Industries</a>
+                            <a href="testimonials.html">Testimonials</a>
+                            <a href="why-us.html">Why Us</a>
+                            <a href="contact.html">Contacts</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="contact.html" class="btn-premium">Inquire Now</a>
+                <button id="mobile-menu-toggle" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+            </nav>
+        </div>
+        <div id="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="vision.html">Vision &amp; Mission</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="industries.html">Industries</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="why-us.html">Why Choose Us</a>
+            <a href="contact.html" class="mobile-nav-cta">Inquire Now</a>
+        </div>
+    </header>
+
+    <section class="inner-hero">
+        <div class="container">
+            <h1 data-reveal>INDUSTRIES WE SERVE</h1>
+            <p data-reveal style="letter-spacing: 5px; text-transform: uppercase; color: var(--primary-gold);">Diverse Expertise, Singular Excellence</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="industry-grid">
+                <div class="industry-card" data-reveal>
+                    <h3>Corporate & Finance</h3>
+                    <p>Time is currency. We provide high-speed aviation solutions for executives, deal-makers, and financial institutions who need to be where the action is, instantly.</p>
+                </div>
+                <div class="industry-card" data-reveal>
+                    <h3>Entertainment & Arts</h3>
+                    <p>Discretion and luxury for world-class artists, film crews, and sports teams. We handle the complexity of global tours with ease.</p>
+                </div>
+                <div class="industry-card" data-reveal>
+                    <h3>Government & Diplomatic</h3>
+                    <p>Secure and efficient transport for heads of state, diplomatic missions, and government officials, adhering to the highest security protocols.</p>
+                </div>
+                <div class="industry-card" data-reveal>
+                    <h3>Energy & Mining</h3>
+                    <p>Specialized transport to remote locations. We provide the logistics backbone for the world's most demanding infrastructure projects.</p>
+                </div>
+                <div class="industry-card" data-reveal>
+                    <h3>Sports & Athletics</h3>
+                    <p>Seamless travel for professional teams and high-profile athletes, ensuring they arrive rested and ready to perform.</p>
+                </div>
+                <div class="industry-card" data-reveal>
+                    <h3>Luxury Tourism</h3>
+                    <p>Curated aerial experiences for the global traveler seeking the extraordinary. From safari lodges to private islands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo">RV <span>GLOBAL</span></a>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-gray);">
+                        Providing elite aviation services since 2010. Redefining the boundaries of luxury travel.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="vision.html">Our Vision</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Jet Charters</a></li>
+                        <li><a href="#">Chopper Rentals</a></li>
+                        <li><a href="#">Medical Evac</a></li>
+                        <li><a href="#">Group Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fa-solid fa-phone gold-text"></i> +1 (800) LUX-TRAVEL</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope gold-text"></i> concierge@rvglobal.com</a></li>
+                        <li><a href="#"><i class="fa-solid fa-location-dot gold-text"></i> Aviation Hub, Bangalore, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rv Global. All Rights Reserved. Crafted for the Elite.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

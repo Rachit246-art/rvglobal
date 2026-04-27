@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Us | Rv Global Luxury Aviation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .inner-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/img/hero_chopper.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .advantage-item-premium {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+        .advantage-item-premium:nth-child(even) {
+            direction: rtl;
+        }
+        .advantage-item-premium:nth-child(even) .advantage-text {
+            direction: ltr;
+        }
+        .advantage-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: var(--primary-gold);
+        }
+        .advantage-text p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        .advantage-img img {
+            width: 100%;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: 20px 20px 0px rgba(197, 160, 89, 0.05);
+        }
+
+        @media (max-width: 992px) {
+            .advantage-item-premium {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                margin-bottom: 60px;
+            }
+            .advantage-item-premium:nth-child(even) {
+                direction: ltr;
+            }
+            .advantage-text h2 {
+                font-size: clamp(2rem, 8vw, 2.5rem);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">RV <span>GLOBAL</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="vision.html">Vision</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">More <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <div class="dropdown-content">
+                            <a href="industries.html">Industries</a>
+                            <a href="testimonials.html">Testimonials</a>
+                            <a href="why-us.html">Why Us</a>
+                            <a href="contact.html">Contacts</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="contact.html" class="btn-premium">Inquire Now</a>
+                <button id="mobile-menu-toggle" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+            </nav>
+        </div>
+        <div id="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="vision.html">Vision &amp; Mission</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="industries.html">Industries</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="why-us.html">Why Choose Us</a>
+            <a href="contact.html" class="mobile-nav-cta">Inquire Now</a>
+        </div>
+    </header>
+
+    <section class="inner-hero">
+        <div class="container">
+            <h1 data-reveal>THE RV GLOBAL EDGE</h1>
+            <p data-reveal style="letter-spacing: 5px; text-transform: uppercase; color: var(--primary-gold);">Why the Elite Choose Us</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="advantage-item-premium" data-reveal>
+                <div class="advantage-text">
+                    <h2>Uncompromising Safety</h2>
+                    <p>
+                        Our commitment to safety is absolute. We operate only with ARG/US Platinum and Wyvern Wingman rated operators, ensuring that every aircraft in our network meets the highest global safety standards.
+                    </p>
+                    <a href="contact.html" class="btn-premium">Learn More</a>
+                </div>
+                <div class="advantage-img">
+                    <img src="assets/img/hero_jet.png" alt="Safety Advantage">
+                </div>
+            </div>
+
+            <div class="advantage-item-premium" data-reveal>
+                <div class="advantage-text">
+                    <h2>Global Concierge 24/7</h2>
+                    <p>
+                        Your journey doesn't end at the tarmac. Our elite concierge team is available around the clock to handle everything from ground transport to personalized cabin requirements.
+                    </p>
+                    <a href="contact.html" class="btn-premium">Our Services</a>
+                </div>
+                <div class="advantage-img">
+                    <img src="assets/img/concierge.png" alt="Concierge Advantage">
+                </div>
+            </div>
+
+            <div class="advantage-item-premium" data-reveal>
+                <div class="advantage-text">
+                    <h2>Time Efficiency</h2>
+                    <p>
+                        In the world of high finance and global leadership, time is the ultimate luxury. We eliminate queues, delays, and complexity, allowing you to focus on what matters most.
+                    </p>
+                    <a href="contact.html" class="btn-premium">View Fleet</a>
+                </div>
+                <div class="advantage-img">
+                    <img src="assets/img/jet_interior.png" alt="Efficiency Advantage">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo">RV <span>GLOBAL</span></a>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-gray);">
+                        Providing elite aviation services since 2010. Redefining the boundaries of luxury travel.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="vision.html">Our Vision</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Jet Charters</a></li>
+                        <li><a href="#">Chopper Rentals</a></li>
+                        <li><a href="#">Medical Evac</a></li>
+                        <li><a href="#">Group Travel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fa-solid fa-phone gold-text"></i> +1 (800) LUX-TRAVEL</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope gold-text"></i> concierge@rvglobal.com</a></li>
+                        <li><a href="#"><i class="fa-solid fa-location-dot gold-text"></i> Aviation Hub, Bangalore, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Rv Global. All Rights Reserved. Crafted for the Elite.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
