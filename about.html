@@ -69,8 +69,10 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-top: 50px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 40px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
         }
         .stat-item h4 {
             color: var(--primary-gold);
@@ -191,19 +193,34 @@
             </div>
             <div class="services-grid">
                 <div class="service-card" data-reveal>
-                    <i class="fa-solid fa-gears"></i>
-                    <h3>Precision Logistics</h3>
-                    <p>Every flight is backed by a 24/7 operations center ensuring real-time monitoring and seamless coordination.</p>
+                    <div class="service-img">
+                        <img src="assets/img/vision_mission.png" alt="Precision Logistics">
+                    </div>
+                    <div class="service-content">
+                        <i class="fa-solid fa-gears" style="position: absolute; top: 20px; right: 20px; font-size: 1.2rem; color: var(--primary-gold); background: rgba(5,7,10,0.6); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--glass-border); backdrop-filter: blur(5px);"></i>
+                        <h3>Precision Logistics</h3>
+                        <p>Every flight is backed by a 24/7 operations center ensuring real-time monitoring and seamless coordination.</p>
+                    </div>
                 </div>
                 <div class="service-card" data-reveal>
-                    <i class="fa-solid fa-user-tie"></i>
-                    <h3>Expert Crew</h3>
-                    <p>Our pilots and cabin crew are handpicked and undergo continuous training to maintain peak performance.</p>
+                    <div class="service-img">
+                        <img src="assets/img/concierge.png" alt="Expert Crew">
+                    </div>
+                    <div class="service-content">
+                        <i class="fa-solid fa-user-tie" style="position: absolute; top: 20px; right: 20px; font-size: 1.2rem; color: var(--primary-gold); background: rgba(5,7,10,0.6); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--glass-border); backdrop-filter: blur(5px);"></i>
+                        <h3>Expert Crew</h3>
+                        <p>Our pilots and cabin crew are handpicked and undergo continuous training to maintain peak performance.</p>
+                    </div>
                 </div>
                 <div class="service-card" data-reveal>
-                    <i class="fa-solid fa-network-wired"></i>
-                    <h3>Global Network</h3>
-                    <p>With strategic partnerships across 150 countries, we ensure local expertise on a global scale.</p>
+                    <div class="service-img">
+                        <img src="assets/img/industry_finance.png" alt="Global Network">
+                    </div>
+                    <div class="service-content">
+                        <i class="fa-solid fa-network-wired" style="position: absolute; top: 20px; right: 20px; font-size: 1.2rem; color: var(--primary-gold); background: rgba(5,7,10,0.6); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--glass-border); backdrop-filter: blur(5px);"></i>
+                        <h3>Global Network</h3>
+                        <p>With strategic partnerships across 150 countries, we ensure local expertise on a global scale.</p>
+                    </div>
                 </div>
             </div>
         </div>

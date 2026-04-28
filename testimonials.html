@@ -27,14 +27,35 @@
         }
         .testimonial-card-premium {
             background: var(--bg-card);
-            border: 1px solid rgba(197, 160, 89, 0.1);
-            padding: 50px;
+            border: 1px solid var(--glass-border);
+            padding: 60px 40px;
             position: relative;
             transition: var(--transition-smooth);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         .testimonial-card-premium:hover {
             border-color: var(--primary-gold);
-            transform: translateY(-10px);
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-gold);
+        }
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border: 2px solid var(--primary-gold);
+            box-shadow: var(--shadow-gold);
+        }
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .testimonial-card-premium i.fa-quote-left {
             font-size: 2.5rem;
@@ -134,32 +155,41 @@
         <div class="container">
             <div class="testimonial-grid-premium">
                 <div class="testimonial-card-premium" data-reveal>
-                    <i class="fa-solid fa-quote-left"></i>
+                    <div class="testimonial-avatar">
+                        <img src="assets/img/industry_finance.png" alt="Sir James Harrington">
+                    </div>
+                    <i class="fa-solid fa-quote-left" style="font-size: 1.2rem; color: var(--primary-gold); margin-bottom: 15px;"></i>
                     <p>"Rv Global has completely transformed our executive travel. The attention to detail and the sheer quality of the aircraft are unmatched. They don't just fly you; they look after you."</p>
                     <div class="testimonial-author">
                         <div class="author-info">
-                            <h4>Sir James Harrington</h4>
-                            <span>CEO, Harrington Global</span>
+                            <h4 style="color: var(--primary-gold);">Sir James Harrington</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-gray);">CEO, Harrington Global</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card-premium" data-reveal>
-                    <i class="fa-solid fa-quote-left"></i>
+                    <div class="testimonial-avatar">
+                        <img src="assets/img/industry_entertainment.png" alt="Elena Rodriguez">
+                    </div>
+                    <i class="fa-solid fa-quote-left" style="font-size: 1.2rem; color: var(--primary-gold); margin-bottom: 15px;"></i>
                     <p>"Discretion is vital in my industry, and Rv Global understands this better than anyone. Their concierge team handles every request with absolute professionalism and elegance."</p>
                     <div class="testimonial-author">
                         <div class="author-info">
-                            <h4>Elena Rodriguez</h4>
-                            <span>International Art Dealer</span>
+                            <h4 style="color: var(--primary-gold);">Elena Rodriguez</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-gray);">International Art Dealer</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card-premium" data-reveal>
-                    <i class="fa-solid fa-quote-left"></i>
+                    <div class="testimonial-avatar">
+                        <img src="assets/img/industry_tourism.png" alt="Marcus Chen">
+                    </div>
+                    <i class="fa-solid fa-quote-left" style="font-size: 1.2rem; color: var(--primary-gold); margin-bottom: 15px;"></i>
                     <p>"From the moment we booked until we arrived, the service was flawless. The cabin configurations were exactly as requested, and the catering was world-class."</p>
                     <div class="testimonial-author">
                         <div class="author-info">
-                            <h4>Marcus Chen</h4>
-                            <span>Tech Venture Capitalist</span>
+                            <h4 style="color: var(--primary-gold);">Marcus Chen</h4>
+                            <span style="font-size: 0.8rem; color: var(--text-gray);">Tech Venture Capitalist</span>
                         </div>
                     </div>
                 </div>

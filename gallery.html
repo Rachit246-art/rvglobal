@@ -40,10 +40,12 @@
             transform: scale(1.1);
         }
         .testimonial-card {
-            background: #111;
-            padding: 50px;
+            background: var(--bg-card);
+            padding: 80px 50px;
             text-align: center;
-            border: 1px solid rgba(197, 160, 89, 0.1);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.5);
         }
         .testimonial-card p {
             font-style: italic;
@@ -63,11 +65,15 @@
             gap: 30px;
         }
         .blog-card {
-            border: 1px solid rgba(255,255,255,0.05);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
             transition: var(--transition-smooth);
+            backdrop-filter: blur(10px);
         }
         .blog-card:hover {
             border-color: var(--primary-gold);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-gold);
         }
         .blog-card img {
             width: 100%;
@@ -143,29 +149,29 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item" data-reveal>
-                    <img src="assets/img/hero_jet.png" alt="Jet 1">
+                    <img src="assets/img/hero_jet.png" alt="Fleet Jet 1">
                 </div>
                 <div class="gallery-item" data-reveal>
-                    <img src="assets/img/hero_chopper.png" alt="Chopper 1">
+                    <img src="assets/img/hero_chopper.png" alt="Fleet Chopper 1">
                 </div>
                 <div class="gallery-item" data-reveal>
-                    <img src="assets/img/jet_interior.png" alt="Interior 1">
+                    <img src="assets/img/jet_interior.png" alt="Fleet Interior 1">
                 </div>
                 <div class="gallery-item" data-reveal>
-                    <img src="assets/img/concierge.png" alt="Service 1">
+                    <img src="assets/img/concierge.png" alt="Elite Service">
                 </div>
                 <div class="gallery-item" data-reveal>
-                    <img src="assets/img/hero_jet.png" alt="Jet 2">
+                    <img src="assets/img/industry_finance.png" alt="Business Jet">
                 </div>
                 <div class="gallery-item" data-reveal>
-                    <img src="assets/img/hero_chopper.png" alt="Chopper 2">
+                    <img src="assets/img/industry_entertainment.png" alt="Lifestyle Jet">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="section-padding" style="background: #050505;">
+    <section class="section-padding" style="background: transparent; border-top: 1px solid var(--glass-border);">
         <div class="container">
             <div class="section-title" data-reveal>
                 <span>Testimonials</span>

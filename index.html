@@ -118,7 +118,7 @@
     </section>
 
     <!-- Vision and Mission Section -->
-    <section class="section-padding" id="vision" style="background: #080808; border-top: 1px solid rgba(197, 160, 89, 0.1); border-bottom: 1px solid rgba(197, 160, 89, 0.1);">
+    <section class="section-padding" id="vision" style="background: rgba(255,255,255,0.01); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
         <div class="container">
             <div class="vision-mission-grid">
                 <div class="vision-content" data-reveal>
@@ -153,7 +153,7 @@
     </section>
 
     <!-- Services Highlight -->
-    <section class="section-padding" id="services" style="background: #050505;">
+    <section class="section-padding" id="services" style="background: transparent;">
         <div class="container">
             <div class="section-title" data-reveal>
                 <span>Premium Services</span>
@@ -161,20 +161,38 @@
             </div>
             <div class="services-grid">
                 <div class="service-card" data-reveal>
+                    <div class="service-img">
+                        <img src="assets/img/hero_jet.png" alt="Private Jet">
+                    </div>
                     <i class="fa-solid fa-plane-up"></i>
-                    <h3>Private Jet Charter</h3>
-                    <p>Global connectivity with unmatched privacy and speed. Tailored itineraries for the discerning traveler.</p>
+                    <div class="service-content">
+                        <h3>Private Jet Charter</h3>
+                        <p>Global connectivity with unmatched privacy and speed. Tailored itineraries for the discerning traveler.</p>
+                    </div>
                 </div>
                 <div class="service-card" data-reveal>
+                    <div class="service-img">
+                        <img src="assets/img/hero_chopper.png" alt="Helicopter Rentals">
+                    </div>
                     <i class="fa-solid fa-helicopter"></i>
-                    <h3>Helicopter Rentals</h3>
-                    <p>Avoid the traffic. Seamless urban transfers and scenic aerial tours with our luxury chopper fleet.</p>
+                    <div class="service-content">
+                        <h3>Helicopter Rentals</h3>
+                        <p>Avoid the traffic. Seamless urban transfers and scenic aerial tours with our luxury chopper fleet.</p>
+                    </div>
                 </div>
                 <div class="service-card" data-reveal>
+                    <div class="service-img">
+                        <img src="assets/img/jet_interior.png" alt="Corporate Travel">
+                    </div>
                     <i class="fa-solid fa-briefcase"></i>
-                    <h3>Corporate Travel</h3>
-                    <p>Efficiency meeting elegance. Dedicated aviation solutions for high-stakes business operations.</p>
+                    <div class="service-content">
+                        <h3>Corporate Travel</h3>
+                        <p>Efficiency meeting elegance. Dedicated aviation solutions for high-stakes business operations.</p>
+                    </div>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;" data-reveal>
+                <a href="services.html" class="btn-premium">View All Services</a>
             </div>
         </div>
     </section>
@@ -188,16 +206,22 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item" data-reveal>
-                    <img src="assets/img/hero_jet.png" alt="Jet 1">
+                    <img src="assets/img/hero_jet.png" alt="Fleet Jet 1">
                 </div>
                 <div class="gallery-item" data-reveal>
-                    <img src="assets/img/hero_chopper.png" alt="Chopper 1">
+                    <img src="assets/img/hero_chopper.png" alt="Fleet Chopper 1">
                 </div>
                 <div class="gallery-item" data-reveal>
-                    <img src="assets/img/jet_interior.png" alt="Interior 1">
+                    <img src="assets/img/jet_interior.png" alt="Fleet Interior 1">
                 </div>
                 <div class="gallery-item" data-reveal>
-                    <img src="assets/img/concierge.png" alt="Service 1">
+                    <img src="assets/img/concierge.png" alt="Elite Service">
+                </div>
+                <div class="gallery-item" data-reveal>
+                    <img src="assets/img/industry_finance.png" alt="Business Jet">
+                </div>
+                <div class="gallery-item" data-reveal>
+                    <img src="assets/img/industry_entertainment.png" alt="Lifestyle Jet">
                 </div>
             </div>
             <div style="text-align: center; margin-top: 50px;">
@@ -207,7 +231,7 @@
     </section>
 
     <!-- Industries Section -->
-    <section class="section-padding" id="industries" style="background: #080808;">
+    <section class="section-padding" id="industries" style="background: rgba(255,255,255,0.01); border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
         <div class="container">
             <div class="section-title" data-reveal>
                 <span>Industries We Serve</span>
@@ -215,16 +239,31 @@
             </div>
             <div class="industry-grid">
                 <div class="industry-card" data-reveal>
-                    <h3>Corporate & Finance</h3>
-                    <p>Time is currency. We provide high-speed aviation solutions for executives and deal-makers.</p>
+                    <div class="industry-img">
+                        <img src="assets/img/industry_finance.png" alt="Corporate & Finance">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Corporate & Finance</h3>
+                        <p>Time is currency. We provide high-speed aviation solutions for executives and deal-makers.</p>
+                    </div>
                 </div>
                 <div class="industry-card" data-reveal>
-                    <h3>Entertainment & Arts</h3>
-                    <p>Discretion and luxury for world-class artists, film crews, and sports teams.</p>
+                    <div class="industry-img">
+                        <img src="assets/img/industry_entertainment.png" alt="Entertainment & Arts">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Entertainment & Arts</h3>
+                        <p>Discretion and luxury for world-class artists, film crews, and sports teams.</p>
+                    </div>
                 </div>
                 <div class="industry-card" data-reveal>
-                    <h3>Government & Diplomatic</h3>
-                    <p>Secure and efficient transport for diplomatic missions and government officials.</p>
+                    <div class="industry-img">
+                        <img src="assets/img/industry_diplomatic.png" alt="Government & Diplomatic">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Government & Diplomatic</h3>
+                        <p>Secure and efficient transport for diplomatic missions and government officials.</p>
+                    </div>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 50px;">
@@ -234,7 +273,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="section-padding" id="testimonials" style="background: #050505;">
+    <section class="section-padding" id="testimonials" style="background: transparent;">
         <div class="container">
             <div class="section-title" data-reveal>
                 <span>Client Experiences</span>
@@ -245,33 +284,49 @@
                     <!-- Review 1 -->
                     <div class="testimonial-slide active">
                         <div class="testimonial-card">
+                            <div class="testimonial-avatar">
+                                <img src="assets/img/industry_finance.png" alt="Sir James Harrington">
+                            </div>
+                            <i class="fa-solid fa-quote-left" style="font-size: 1.2rem; color: var(--primary-gold); margin-bottom: 15px;"></i>
                             <p>"Rv Global has completely transformed our executive travel. The attention to detail and the sheer quality of the aircraft are unmatched. They don't just fly you; they look after you."</p>
-                            <div class="author">Sir James Harrington</div>
+                            <h4 style="color: var(--primary-gold); margin-top: 10px;">SIR JAMES HARRINGTON</h4>
                             <div style="font-size: 0.8rem; color: var(--text-gray); margin-top: 5px;">CEO, Harrington Global</div>
                         </div>
                     </div>
                     <!-- Review 2 -->
                     <div class="testimonial-slide">
                         <div class="testimonial-card">
+                            <div class="testimonial-avatar">
+                                <img src="assets/img/industry_entertainment.png" alt="Elena Rodriguez">
+                            </div>
+                            <i class="fa-solid fa-quote-left" style="font-size: 1.2rem; color: var(--primary-gold); margin-bottom: 15px;"></i>
                             <p>"Discretion is vital in my industry, and Rv Global understands this better than anyone. Their concierge team handles every request with absolute professionalism and elegance."</p>
-                            <div class="author">Elena Rodriguez</div>
+                            <h4 style="color: var(--primary-gold); margin-top: 10px;">ELENA RODRIGUEZ</h4>
                             <div style="font-size: 0.8rem; color: var(--text-gray); margin-top: 5px;">International Art Dealer</div>
                         </div>
                     </div>
                     <!-- Review 3 -->
                     <div class="testimonial-slide">
                         <div class="testimonial-card">
+                            <div class="testimonial-avatar">
+                                <img src="assets/img/industry_tourism.png" alt="Marcus Chen">
+                            </div>
+                            <i class="fa-solid fa-quote-left" style="font-size: 1.2rem; color: var(--primary-gold); margin-bottom: 15px;"></i>
                             <p>"From the moment we booked until we arrived, the service was flawless. The cabin configurations were exactly as requested, and the catering was world-class."</p>
-                            <div class="author">Marcus Chen</div>
+                            <h4 style="color: var(--primary-gold); margin-top: 10px;">MARCUS CHEN</h4>
                             <div style="font-size: 0.8rem; color: var(--text-gray); margin-top: 5px;">Tech Venture Capitalist</div>
                         </div>
                     </div>
                     <!-- Review 4 -->
                     <div class="testimonial-slide">
                         <div class="testimonial-card">
-                            <p>"When time is of the essence, Rv Global always delivers. Their rapid deployment capabilities and seamless coordination have been invaluable to our global operations."</p>
-                            <div class="author">Victoria Sterling</div>
-                            <div style="font-size: 0.8rem; color: var(--text-gray); margin-top: 5px;">Global Logistics Director</div>
+                            <div class="testimonial-avatar">
+                                <img src="assets/img/industry_diplomatic.png" alt="Ambassador">
+                            </div>
+                            <i class="fa-solid fa-quote-left" style="font-size: 1.2rem; color: var(--primary-gold); margin-bottom: 15px;"></i>
+                            <p>"The security protocols and logistical precision are second to none. For diplomatic missions where timing is everything, Rv Global is our only choice."</p>
+                            <h4 style="color: var(--primary-gold); margin-top: 10px;">HIS EXCELLENCY J. SMITH</h4>
+                            <div style="font-size: 0.8rem; color: var(--text-gray); margin-top: 5px;">Diplomatic Envoy</div>
                         </div>
                     </div>
                 </div>

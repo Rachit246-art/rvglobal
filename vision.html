@@ -28,15 +28,18 @@
         }
         .vm-card-premium {
             background: var(--bg-card);
-            border: 1px solid rgba(197, 160, 89, 0.1);
+            border: 1px solid var(--glass-border);
             position: relative;
             overflow: hidden;
             transition: var(--transition-smooth);
             padding: 0;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
         }
         .vm-card-premium:hover {
             border-color: var(--primary-gold);
-            transform: translateY(-10px);
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-gold);
         }
         .vm-card-img {
             height: 250px;
@@ -167,16 +170,25 @@
             </div>
             <div class="services-grid">
                 <div class="service-card" data-reveal>
-                    <h3>Integrity</h3>
-                    <p>Honesty and transparency in every transaction and operation.</p>
+                    <div class="service-content">
+                        <i class="fa-solid fa-handshake" style="position: static; margin-bottom: 20px; background: transparent; border: none; font-size: 2.5rem; width: auto; height: auto;"></i>
+                        <h3>Integrity</h3>
+                        <p>Honesty and transparency in every transaction and operation. We build trust through excellence.</p>
+                    </div>
                 </div>
                 <div class="service-card" data-reveal>
-                    <h3>Innovation</h3>
-                    <p>Constantly evolving our services and fleet with modern technology.</p>
+                    <div class="service-content">
+                        <i class="fa-solid fa-lightbulb" style="position: static; margin-bottom: 20px; background: transparent; border: none; font-size: 2.5rem; width: auto; height: auto;"></i>
+                        <h3>Innovation</h3>
+                        <p>Constantly evolving our services and fleet with modern technology and sustainable practices.</p>
+                    </div>
                 </div>
                 <div class="service-card" data-reveal>
-                    <h3>Discretion</h3>
-                    <p>Total privacy for our high-profile and executive clients.</p>
+                    <div class="service-content">
+                        <i class="fa-solid fa-lock" style="position: static; margin-bottom: 20px; background: transparent; border: none; font-size: 2.5rem; width: auto; height: auto;"></i>
+                        <h3>Discretion</h3>
+                        <p>Total privacy for our high-profile and executive clients. Your journey remains yours alone.</p>
+                    </div>
                 </div>
             </div>
         </div>

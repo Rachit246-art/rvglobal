@@ -22,23 +22,51 @@
         }
         .industry-card {
             background: var(--bg-card);
-            border: 1px solid rgba(197, 160, 89, 0.1);
-            padding: 40px;
+            border: 1px solid var(--glass-border);
+            padding: 0;
             transition: var(--transition-smooth);
+            backdrop-filter: blur(20px);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
         .industry-card:hover {
             border-color: var(--primary-gold);
-            background: #111;
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-gold);
         }
-        .industry-card h3 {
+        .industry-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .industry-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+        .industry-card:hover .industry-img img {
+            transform: scale(1.1);
+        }
+        .industry-content {
+            padding: 40px;
+        }
+        .industry-content h3 {
             color: var(--primary-gold);
             margin-bottom: 15px;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+        }
+        .industry-content p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.7;
         }
         .industry-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
         }
 
         @media (max-width: 768px) {
@@ -98,28 +126,58 @@
         <div class="container">
             <div class="industry-grid">
                 <div class="industry-card" data-reveal>
-                    <h3>Corporate & Finance</h3>
-                    <p>Time is currency. We provide high-speed aviation solutions for executives, deal-makers, and financial institutions who need to be where the action is, instantly.</p>
+                    <div class="industry-img">
+                        <img src="assets/img/industry_finance.png" alt="Corporate & Finance">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Corporate & Finance</h3>
+                        <p>Time is currency. We provide high-speed aviation solutions for executives, deal-makers, and financial institutions who need to be where the action is, instantly.</p>
+                    </div>
                 </div>
                 <div class="industry-card" data-reveal>
-                    <h3>Entertainment & Arts</h3>
-                    <p>Discretion and luxury for world-class artists, film crews, and sports teams. We handle the complexity of global tours with ease.</p>
+                    <div class="industry-img">
+                        <img src="assets/img/industry_entertainment.png" alt="Entertainment & Arts">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Entertainment & Arts</h3>
+                        <p>Discretion and luxury for world-class artists, film crews, and sports teams. We handle the complexity of global tours with ease.</p>
+                    </div>
                 </div>
                 <div class="industry-card" data-reveal>
-                    <h3>Government & Diplomatic</h3>
-                    <p>Secure and efficient transport for heads of state, diplomatic missions, and government officials, adhering to the highest security protocols.</p>
+                    <div class="industry-img">
+                        <img src="assets/img/industry_diplomatic.png" alt="Government & Diplomatic">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Government & Diplomatic</h3>
+                        <p>Secure and efficient transport for heads of state, diplomatic missions, and government officials, adhering to the highest security protocols.</p>
+                    </div>
                 </div>
                 <div class="industry-card" data-reveal>
-                    <h3>Energy & Mining</h3>
-                    <p>Specialized transport to remote locations. We provide the logistics backbone for the world's most demanding infrastructure projects.</p>
+                    <div class="industry-img">
+                        <img src="assets/img/industry_energy.png" alt="Energy & Mining">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Energy & Mining</h3>
+                        <p>Specialized transport to remote locations. We provide the logistics backbone for the world's most demanding infrastructure projects.</p>
+                    </div>
                 </div>
                 <div class="industry-card" data-reveal>
-                    <h3>Sports & Athletics</h3>
-                    <p>Seamless travel for professional teams and high-profile athletes, ensuring they arrive rested and ready to perform.</p>
+                    <div class="industry-img">
+                        <img src="assets/img/industry_sports.png" alt="Sports & Athletics">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Sports & Athletics</h3>
+                        <p>Seamless travel for professional teams and high-profile athletes, ensuring they arrive rested and ready to perform.</p>
+                    </div>
                 </div>
                 <div class="industry-card" data-reveal>
-                    <h3>Luxury Tourism</h3>
-                    <p>Curated aerial experiences for the global traveler seeking the extraordinary. From safari lodges to private islands.</p>
+                    <div class="industry-img">
+                        <img src="assets/img/industry_tourism.png" alt="Luxury Tourism">
+                    </div>
+                    <div class="industry-content">
+                        <h3>Luxury Tourism</h3>
+                        <p>Curated aerial experiences for the global traveler seeking the extraordinary. From safari lodges to private islands.</p>
+                    </div>
                 </div>
             </div>
         </div>
