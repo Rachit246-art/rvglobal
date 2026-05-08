@@ -96,4 +96,38 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Auto Lead Modal Trigger (Triggers at 3rd section - #services)
+  const autoModal = document.getElementById('auto-lead-modal');
+  const servicesSection = document.getElementById('services');
+  const closeAutoModal = document.getElementById('close-auto-modal');
+  let modalShown = false;
+
+  if (autoModal && servicesSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        // Only trigger if intersecting, not yet shown, AND user has actually scrolled (scrollY > 0)
+        if (entry.isIntersecting && !modalShown && window.scrollY > 100) {
+          setTimeout(() => {
+            autoModal.classList.add('active');
+            modalShown = true;
+          }, 800); 
+        }
+      });
+    }, { threshold: 0.1 }); 
+
+    observer.observe(servicesSection);
+
+    if (closeAutoModal) {
+      closeAutoModal.addEventListener('click', () => {
+        autoModal.classList.remove('active');
+      });
+    }
+
+    autoModal.addEventListener('click', (e) => {
+      if (e.target === autoModal) {
+        autoModal.classList.remove('active');
+      }
+    });
+  }
 });
