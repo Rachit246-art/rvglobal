@@ -370,12 +370,26 @@
         </div>
     </div>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
+    <!-- Chatbot Button -->
+    <a href="#" class="chatbot-float" id="chatbot-toggle" aria-label="Open Chatbot">
+        <i class="fa-solid fa-comment-dots"></i>
     </a>
 
     <!-- Scripts -->
     <script src="assets/js/script.js"></script>
+<!-- Chatbot Container -->
+<div id="chatbot-container" class="chatbot-container">
+    <div class="chatbot-header">
+        <div class="header-info">
+            <i class="fa-solid fa-plane-up" style="color: #fff; font-size: 1.2rem;"></i>
+            <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.1rem; letter-spacing: 1px;">RV Concierge</span>
+        </div>
+        <button id="chatbot-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="chatbot-body">
+        <div id="chat-messages"></div>
+        <div class="chatbot-options" id="chat-options"></div>
+    </div>
+</div>
 </body>
 </html>

@@ -130,4 +130,123 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+  // Chatbot Toggle Logic
+  const chatbotToggle = document.getElementById('chatbot-toggle');
+  const chatbotContainer = document.getElementById('chatbot-container');
+  const chatbotClose = document.getElementById('chatbot-close');
+
+  if (chatbotToggle && chatbotContainer) {
+    chatbotToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      chatbotContainer.classList.toggle('active');
+    });
+
+    if (chatbotClose) {
+      chatbotClose.addEventListener('click', () => {
+        chatbotContainer.classList.remove('active');
+      });
+    }
+
+    // Options-based Chatbot Logic
+    const chatOptions = document.getElementById('chat-options');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatBody = chatbotContainer.querySelector('.chatbot-body');
+
+    const chatData = {
+      start: {
+        message: "Welcome to RV Global Aviation. How may we assist your international travel plans today?",
+        options: [
+          { text: "Private Jet Charter", next: "jet_charter" },
+          { text: "Medical Evacuation", next: "medical" },
+          { text: "Group Charter", next: "group" },
+          { text: "Speak to Expert", next: "expert" }
+        ]
+      },
+      jet_charter: {
+        message: "Excellent choice. What type of journey are you planning?",
+        options: [
+          { text: "International Trip", next: "contact_final" },
+          { text: "Domestic Flight", next: "contact_final" },
+          { text: "Multi-city Tour", next: "contact_final" },
+          { text: "Back", next: "start" }
+        ]
+      },
+      medical: {
+        message: "Medical flights are our priority. Do you require ICU equipment onboard?",
+        options: [
+          { text: "Yes, ICU Required", next: "contact_final" },
+          { text: "No, Patient Transport", next: "contact_final" },
+          { text: "Back", next: "start" }
+        ]
+      },
+      group: {
+        message: "For how many passengers are you planning the charter?",
+        options: [
+          { text: "15-30 Passengers", next: "contact_final" },
+          { text: "30+ Passengers", next: "contact_final" },
+          { text: "Back", next: "start" }
+        ]
+      },
+      expert: {
+        message: "A senior aviation consultant is ready to assist you. How would you like to connect?",
+        options: [
+          { text: "Call Now", next: "call" },
+          { text: "WhatsApp Chat", next: "whatsapp" },
+          { text: "Back", next: "start" }
+        ]
+      },
+      contact_final: {
+        message: "Thank you. Please leave your contact details or call us directly at +91 98765 43210 for an instant quote.",
+        options: [
+          { text: "Call Now", next: "call" },
+          { text: "Start Over", next: "start" }
+        ]
+      },
+      call: { message: "Redirecting to call...", action: () => window.location.href = "tel:+919876543210" },
+      whatsapp: { message: "Opening WhatsApp...", action: () => window.open("https://wa.me/919876543210", "_blank") }
+    };
+
+    function showStep(stepId) {
+      const step = chatData[stepId];
+      if (!step) return;
+
+      if (step.action) {
+        step.action();
+        return;
+      }
+
+      // Add Bot Message
+      const botMsg = document.createElement('div');
+      botMsg.className = 'chat-message bot';
+      botMsg.innerHTML = `<p>${step.message}</p>`;
+      chatMessages.appendChild(botMsg);
+
+      // Clear old options
+      chatOptions.innerHTML = '';
+
+      // Add new options
+      step.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'option-btn';
+        btn.innerText = opt.text;
+        btn.onclick = () => {
+          // Add User Message (Selection)
+          const userMsg = document.createElement('div');
+          userMsg.className = 'chat-message user';
+          userMsg.innerHTML = `<p>${opt.text}</p>`;
+          chatMessages.appendChild(userMsg);
+          
+          chatBody.scrollTop = chatBody.scrollHeight;
+          
+          setTimeout(() => showStep(opt.next), 500);
+        };
+        chatOptions.appendChild(btn);
+      });
+
+      chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    // Initialize the first step
+    showStep('start');
+  }
 });
