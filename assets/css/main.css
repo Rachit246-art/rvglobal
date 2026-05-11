@@ -887,3 +887,22 @@ footer {
   }
 }
 
+/* Botpress Chatbot Theme Overrides */
+#bp-web-widget-container .bpw-floating-button,
+#bp-web-widget-container .bpw-button,
+.bpw-floating-button {
+    background-color: var(--primary-gold) !important;
+    border-color: var(--primary-gold) !important;
+}
+
+#bp-web-widget-container .bpw-floating-button:hover {
+    background-color: var(--primary-gold-dark) !important;
+}
+
+/* For newer Botpress Cloud versions */
+:root {
+    --bp-theme-primary: #b8860b;
+    --bp-theme-primary-hover: #9a7009;
+}
+
+
