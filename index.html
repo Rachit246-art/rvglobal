@@ -376,9 +376,22 @@
     <!-- Botpress Chatbot -->
     <script>
       window.botpressWebChatConfig = {
-        "themeColor": "#b8860b", // Custom Gold Theme
+        "themeColor": "#b8860b", 
         "theme": "light"
       };
+      
+      // Force theme update after load using native Botpress events
+      window.addEventListener('load', function() {
+        if (window.botpressWebChat) {
+          window.botpressWebChat.onEvent(function(event) {
+            if (event.type === 'LIFECYCLE.LOADED') {
+              window.botpressWebChat.sendConfig({
+                "themeColor": "#b8860b"
+              });
+            }
+          }, ['LIFECYCLE.LOADED']);
+        }
+      });
     </script>
     <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2026/05/11/06/20260511065054-F6BUSPOT.js" defer></script>
